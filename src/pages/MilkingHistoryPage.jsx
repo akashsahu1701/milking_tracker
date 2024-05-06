@@ -30,8 +30,8 @@ const MilkingHistoryPage = () => {
             <tr key={index}>
               <td>{session.date}</td>
               <td>{session.startTime}</td>
-              <td>{session.totalTime}</td>
-              <td>{session.totalMilk}</td>
+              <td>{session.totalTime} sec</td>
+              <td>{session.totalMilk} L</td>
             </tr>
           ))}
         </tbody>
