@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/MilkingPage.css";
+import { Link } from "react-router-dom";
 
 function MilkingPage() {
   const [audio, setAudio] = useState(new Audio(require("../assets/music.mp3")));
@@ -96,6 +97,10 @@ function MilkingPage() {
             </button>
           </>
         )}
+
+        <Link to={"/history"} className="view-history-button">
+          View History
+        </Link>
       </div>
     </div>
   );

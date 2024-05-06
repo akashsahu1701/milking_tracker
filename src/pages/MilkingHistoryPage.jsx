@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/MilkingHistory.css";
+import { Link } from "react-router-dom";
 
 const MilkingHistoryPage = () => {
   const [milkingHistory, setMilkingHistory] = useState([]);
@@ -9,13 +10,17 @@ const MilkingHistoryPage = () => {
   }, []);
   return (
     <div>
-      <h2>Milking History</h2>
+      <div className="heading-container">
+        <h2 className="history-title">Milking History</h2>
+        <Link to={"/"} className="view-history-button">
+          Go Back
+        </Link>
+      </div>
       <table>
         <thead>
           <tr>
             <th>Date</th>
             <th>Start Time</th>
-            <th>End Time</th>
             <th>Total Time</th>
             <th>Total Milk</th>
           </tr>
@@ -25,7 +30,6 @@ const MilkingHistoryPage = () => {
             <tr key={index}>
               <td>{session.date}</td>
               <td>{session.startTime}</td>
-              <td>{session.endTime}</td>
               <td>{session.totalTime}</td>
               <td>{session.totalMilk}</td>
             </tr>
